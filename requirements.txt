@@ -1,0 +1,14 @@
+keras==3.9.0
+matplotlib==3.10.1
+numpy==2.2.3
+onnx==1.17.0
+onnx2pytorch==0.5.1
+pandas==2.2.3
+Pillow==11.1.0
+scikit_learn==1.5.2
+tensorflow==2.18.0
+tensorflow_intel==2.18.0
+tf2onnx==1.16.1
+torch==2.5.0
+torchvision==0.20.0
+zennit==0.5.1
