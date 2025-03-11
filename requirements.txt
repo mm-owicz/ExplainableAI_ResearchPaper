@@ -1,8 +1,6 @@
 keras==3.9.0
 matplotlib==3.10.1
 numpy==2.2.3
-onnx==1.17.0
-onnx2pytorch==0.5.1
 pandas==2.2.3
 Pillow==11.1.0
 scikit_learn==1.5.2
