@@ -21,19 +21,19 @@ def get_image_for_classes(dir, classes):
 
     for fname in sorted(os.listdir(dir)):
         if fname.lower().endswith(('.jpg', '.jpeg', '.png')):
-            match = re.search(r'@([^@]+)@', fname)
-            if match:
-                label = match.group(1)
-                if label in classes:
-                    class_files[label].append(os.path.join(dir, fname))
+            name_without_ext = fname.rsplit('.', 1)[0]
+            parts = name_without_ext.split('@')
+            label = '@'.join(parts[:2])
+            if label in classes:
+                class_files[label].append(os.path.join(dir, fname))
     return class_files
 
 # classes we trained the model for:
-face_classes = ['N08_identity_4',
- 'N00_identity_14',
- 'N00_identity_11',
- 'N00_identity_0',
- 'N04_identity_5']
+face_classes = ['101506130@N03_identity_0',
+ '102962858@N03_identity_2',
+ '105391338@N08_identity_0',
+ '105546346@N08_identity_2',
+ '105700383@N05_identity_7']
 
 CLASSES_FILES = get_image_for_classes('data/', face_classes)
 
